@@ -8,10 +8,16 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-public abstract class MetierImpl implements IMetier {
+public  class MetierImpl implements IMetier {
     @Qualifier("data") //partII
     @Autowired //partII
     private IData datacall;
+
+    @Override
+    public double calcule() {
+        return 0;
+    }
+
     @Override
     public double calcul() {
 
